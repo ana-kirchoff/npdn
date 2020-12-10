@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Goldman&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+<script type="text/javascript" src="ajax.js" > </script>
+<link rel="icon" href="imagens/logo.png" type="image/x-icon" />
+<script type="text/javascript">
+
+	function pageLoader () {
+		sendRequestGet( 'header', 'header.html' );
+		sendRequestGet( 'construcao', 'construcao.html' );
+
+	}
+	
+
+</script>
+
+</head>
+
+<style type="text/css">
+	
+html{
+    scroll-behavior:smooth;
+    overflow-x: hidden; 
+}
+body{
+width:100%;
+height:auto;
+background-color:rgb(10, 17, 13);
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 10px 10px 10px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #89E163;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#header{
+	width: 100%;
+	height: 30rem;
+	background-image: url('imagens/header.jpg');
+	background-size: 100% 60%;
+	background-position: top;
+	background-attachment: fixed;
+	margin-left:-0.5rem;
+	margin-top:-5rem;
+}
+#construcao{
+	padding-top:5rem;
+	margin-left:-0.5rem;
+	width:100%;
+	height:28rem;
+	background-size: 100% 100%;
+	background-position:bottom;
+	background-image: url('imagens/fundo.jpg');
+	text-align: center;
+}
+
+.div_footer{
+	width:20%;
+	float:left;
+	color:white;
+}
+
+h5.h5_footer{
+	margin-top:15%;
+	font-family: 'Open Sans', sans-serif;
+}
+
+a.link_footer:link {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-family: 'Open Sans', sans-serif;
+  font-size:10pt;
+
+
+}
+
+a.link_footer:visited {
+  color: #FFFFFF;
+}
+
+a.link_footer:hover {
+  color: ;
+}
+.button_cont {
+	background-color:#7ed957;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:11pt;
+	font-weight:bold;
+	padding:10px 40px;
+	text-decoration:none;
+	margin-left:4%;
+}
+.button_cont:hover {
+	background-color:#7ed957;
+}
+.button_cont:active {
+	position:relative;
+	top:1px;
+}
+
+.img_link{
+margin-top:1rem;
+	padding-bottom:1rem;
+	width:20%;
+	float:left;
+}
+
+.img_logo_footer{
+	width:30%; 
+	margin-left:20%; 
+	margin-top:15%; 
+	padding-bottom:10%;
+
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+
+#header{
+	width: 100%;
+	height: 20rem;
+	background-image: url('imagens/header.jpg');
+	background-size: 100% 100%;
+	background-position: center;
+	background-attachment: inherit;
+	background-repeat:no-repeat;
+	margin-left:-0.5rem;
+	margin-top:-5rem;
+}
+
+#construcao{
+	margin-left:-0.5rem;
+	margin-top:-2rem;
+	width:100%;
+	background-color: #FFFFFF;
+	height:20rem;
+}
+
+.div_footer{
+	margin-left:5%;
+	width:100%;
+	float:left;
+	color:white;
+}
+
+
+.button_cont {
+	background-color:#7ed957;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:11pt;
+	font-weight:bold;
+	padding:10px 40px;
+	text-decoration:none;
+	margin-left:20%;
+	margin-bottom:5%;
+}
+
+.img_link{
+	margin-top:1rem;
+	padding-bottom:1rem;
+	margin-left:20%;
+	margin-right:-20%;
+	width:15%;
+	float:left;
+}
+
+.img_logo_footer{
+margin-left:-1%;
+	width:20%; 
+	margin-top:15%; 
+	padding-bottom:10%;
+
+}
+}
+
+</style>
+
+
+<body onload="pageLoader()">
+
+	<!-- Menu -->
+	<div id="mySidenav" class="sidenav">
+	  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+	  <img src="imagens/logo.png" style="width:50%; margin-left:5%;"/>
+	  <a style="color:white; line-height:3rem;  font-family: 'Montserrat'; font-weight:light; font-size:14pt;" href="#header">Home</a>
+	  <a style="color:white; line-height:3rem;  font-family: 'Montserrat'; font-weight:light; font-size:14pt;" href="#servico">Serviços</a>
+	  <a style="color:white; line-height:3rem;  font-family: 'Montserrat'; font-weight:light; font-size:14pt;" href="#sobre">Sobre</a>
+	  <a style="color:white; line-height:3rem;  font-family: 'Montserrat'; font-weight:light; font-size:14pt;" href="#contato">Contato</a>
+	</div>
+	
+	<span style="position: fixed; margin-top: 100px; margin-left: 15px;  padding: 8px 10px 10px 10px; border-radius:5px; color:#89E163; font-size:40px;cursor:pointer" onclick="openNav()">&#9776;</span>
+	
+	<script>
+	function openNav() {
+	  document.getElementById("mySidenav").style.width = "250px";
+	}
+	
+	function closeNav() {
+	  document.getElementById("mySidenav").style.width = "0";
+	}
+	</script>
+	<!-- Fim do menu -->
+	
+	
+	<!-- Adicionar documentos -->
+	<div id="header">InnerHTML</div>
+		<div id="construcao">InnerHTML</div>
+	
+	<footer style="background-color:#191919">
+		<div class="div_footer">
+			<img src="imagens/logo.png" class="img_logo_footer"=""/>
+		</div>
+		<div class="div_footer" >
+			<h5 class="h5_footer">INÍCIO</h1>
+			<a class="link_footer" href="">Home </a><br/>
+			<a class="link_footer" href="">Projetos </a>
+		</div>
+		<div class="div_footer">
+			<h5 class="h5_footer">SOBRE NÒS</h1>
+			<a class="link_footer" href="">Informação da empresa</a><br/>
+			<a class="link_footer" href="">Contato </a>
+		</div>
+		<div class="div_footer">
+			<h5 class="h5_footer">ÀREA RESTRITA </h1>
+			<a class="link_footer" href="">Login </a>
+		</div>
+			<div class="div_footer">
+			<a href="#" class="img_link_social"><img class="img_link" src="imagens/1.png"/></a>
+			<a href="#" class="img_link_social"><img class="img_link" src="imagens/2.png"/></a>
+			<a href="#" class="img_link_social"><img class="img_link" src="imagens/3.png"/></a>
+			<a href="#" class="button_cont">Contato</a>
+			
+		</div>
+	</footer>
+</body>
+</html>
